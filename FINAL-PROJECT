@@ -3,20 +3,18 @@
 ## What idea(s) do you have for your final project?
 
 IDEA 1: Make a game on case sensativity, or to make a game similar to (as you stated professor), typing of the dead.
-This will be typed either in pygame, or in PICO-8
+This will be typed either in pygame, or in PICO-8. I prefer PICO-8, because all of the resources are available, unlike Pygame.
+That program may be harder for me, as multiple files must be pulled up to work with the project.
 
 The plot of this game is this: You are hired to work at a Power Plant run by Duc-tor Doom.
 The Duc-tor makes it clear. Type everything (in the computer) correctly. Otherwise, the Plant explodes.
 If you type correctly, you recieve annual payment of 100,000 dollars (Is that too much for 1 day, probably).
 The purpose is to practice case sensativity. However, if this game (by your call, professor) has a similar style to typing of the dead,
-Then, I can make this funnier. I can make this game so it prevents ducks from wandering into the plant.
-Why are they going there? Because the pipe systems look like glowwy seaweed! (These guys aren't very bright).
-Although, it will very much so compromise the energy of the game, which is essentially chaotic humor found in the code.
-Although, it can be incorporated in the dialogue, which can really carry a game. 
-If there is another way to make the idea more clever, please let me know, professor.
-One final note. I have PICO-8. This may make it easier, in terms of making art and music.
-However, I may be limited in terms of dialogue due to the amount fo code.
+It may affect the plot. My solution to this is to make code to defend the power plant from ducks that think the system pipes are glowing seaweed.
+This style will incorporate more humor, as dialogue can carry a game with a simple premise.
 
+IDEA 2: I suppose I can make something a little bit more clever, but I am not of a premise, though. 
+PICO-8 is pretty limited in terms of scale, so I'd have to examine some games on the platform for ideas.
 
 
 TODO
@@ -27,4 +25,4 @@ TODO: I will not be collaborating with other students.
 
 ## Do you have any questions of your own?
 
-TODO: All I need for this game is a background, the code, sprites, and a text box 
+TODO: 
