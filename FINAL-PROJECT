@@ -2,27 +2,17 @@
 
 ## What idea(s) do you have for your final project?
 
-IDEA 1: Make a game on case sensativity, or to make a game similar to (as you stated professor), typing of the dead.
-This will be typed either in pygame, or in PICO-8. I prefer PICO-8, because all of the resources are available, unlike Pygame.
-That program may be harder for me, as multiple files must be pulled up to work with the project.
+I plan to do all my projects on PICO-8
 
-The plot of this game is this: You are hired to work at a Power Plant run by Duc-tor Doom.
-The Duc-tor makes it clear. Type everything (in the computer) correctly. Otherwise, the Plant explodes.
-If you type correctly, you recieve annual payment of 100,000 dollars (Is that too much for 1 day, probably).
-The purpose is to practice case sensativity. However, if this game (by your call, professor) has a similar style to typing of the dead,
-It may affect the plot. My solution to this is to make code to defend the power plant from ducks that think the system pipes are glowing seaweed.
-This style will incorporate more humor, as dialogue can carry a game with a simple premise.
+IDEA: Make a game on case sensativity, or to make a game similar to (as you stated professor), "Typing of the Dead."
 
-IDEA 2: I suppose I can make something a little bit more clever, but I am not of a premise, though. 
-PICO-8 is pretty limited in terms of scale, so I'd have to examine some games on the platform for ideas.
-I believe the best video games for PICO-8 are Single-Screen games. (Similar to older games like Donkey Kong or Pac Man). 
-These 'Single Screen' games can have plenty of code, and also a handful of dialogue added for charm.
+The plot: You are hired to work at a Power Plant run by Duc-tor Doom.
+The Duc-tor makes it clear. Type everything (given in game) correctly. Otherwise, the Plant explodes.
+If you type correctly, you recieve annual payment of 10,000 dollars (Is that too much for day one work, probably).
+The "Typing of the Dead" approach can work here as well (with little change to the plot). 
+I have a list of code to type in game, and there can be a time constraint while typing each line.
 
-Note: Speaking of adding, I will not be doing mods, as many games us C, like Stardew Valley. 
-I appreciated, professor, your reccomendation for a Stardew Valley Mod, but I believe too far out of reach for now.
-
-Back to idea 2: I have no clue what to do for idea two. If you have any recomendations for 'Single-Screen' games, that would be nice
-
+DOWNSIDE: Its rather simplistic (in terms of code), but the dialogue could balance it out. I plan to make this with chaotic humor.
 
 TODO
 
@@ -32,4 +22,4 @@ TODO: I will not be collaborating with other students.
 
 ## Do you have any questions of your own?
 
-TODO: 
+TODO: No.
