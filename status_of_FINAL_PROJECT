@@ -1,0 +1,45 @@
+# Status Report
+
+#### Your name
+
+NURAH SENTURK
+
+#### Your section leader's name
+
+NURAH SENTURK
+
+#### Project title
+
+BANE OF WOLVES
+
+***
+
+Short answers for the below questions suffice. If you want to alter your plan for your project (and obtain approval for the same), be sure to email your section leader directly!
+
+#### What have you done for your project so far?
+
+As you know, Professor, I am working on a visual novel with multiple branching parts (similar to a tree). 
+Currently, I have made 3 branches, each confronting an internal issue with the main character. 
+This was significant for me, as I struggle to write the 'Rising Action' in a story. 
+However, each event contributes in someway to the main character and overall narrative, which asks the player,
+"How does a wicked man find redemption when there is no hope in himself, or what he can do?"
+
+Of course, I would like to add more, but, for the sake of time, I decided to focus more on the programming. 
+For instance, I can manipulate the text boxes using {csp="any time"} and also {w="How long until the text pops up"}. 
+There may be others, of which I can do research, but I feel that this could help add some kick, as if you can feel what the character feels. 
+Not only that, but I've learned how to make the branching paths using the (menu), (jump), and if/else statements, though this took a bit of time. 
+I needed to add an empty function and write my choices using the $ (which I considered to mean "This is valuable, I need to store it and remember it.") 
+(It will make more sense upon submission)
+
+I also am currently learning to add mini-games, which sole purpose is to demonstrate the main characters arc.
+This was done best with the spacebar.
+
+#### What have you not done for your project yet?
+
+I have not included sprites or images into the story yet. Even the text box isn't up to parr! However, I know that I need to incorporate them in the files for images, pre-set by ren'py. The same applies for audio, though that may be harder, which is why I am focusing more on the dioalogue, visuals, and programming. Any other part of the story may be incorporated later down the line, but not in the midst of the semester.
+
+#### What problems, if any, have you encountered?
+
+Starting up ren'py was the hardest thing for me to do. Why? Well, I suppose it's because I couldn't find many videos to walk me through the process. I ended up downloading 5 times and trying to figure out why nothing printed (appently there is a built in file for typing script, but I tried using Visual Studio Code by itself). So, that was the hardest thing for me. 
+
+By the grace and providence of God, he gave me patience, and helped me figure out how to get the program started. Overall, there were very few problems.
