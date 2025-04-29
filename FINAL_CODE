@@ -49,6 +49,7 @@ image Shepherd Neutral = "Shepherd_Neutral.png"
 image Shepherd Growl = "Shepherd_Growl.png"
 image Shepherd Bark = "Shepherd_Bark.png"
 image Shepherd Calm = "Shepherd_Calm.png"
+image Shepherd Happy = "Shepherd_Happy.png"
 
 # CHARACTER CALL
 
@@ -72,7 +73,7 @@ label start:
     pause 2.0
 
     p_j_d "{w=1.0}My letters hadn't gone through. {w=2.0}He hasn't written back."
-    p_j_d "{w=1.0}...Lord, I've sinned against you. Please be merciful to me. {w=1.0}Please. {w=1.0}I don't deserve it, but..."
+    p_j_d "{w=1.0}...Lord, I've sinned against you.{w=0.5} Please be merciful to me. {w=1.0}Please. {w=1.0}I don't deserve it, but..."
     g_s "BARK!"
     p_j_d "-!"
     g_s "BARK!{w=0.5} BARK!"
@@ -80,7 +81,7 @@ label start:
     n "He bends down and leaves bread for the dog, which he laps up."
 
     pause 1.0
-    p_j_d "'Even the dogs eat the crumbs from under their master's table.' {w=0.5}...even the dogs...'"
+    p_j_d "'Even the dogs eat the crumbs from under their master's table.' {w=0.5}Even the dogs...?"
 
     pause 1.0
 
@@ -106,7 +107,8 @@ label chapter_1:
     
     pause 1.0
 
-    show Jenkin Neutral at left
+    show Jenkin Neutral at left:
+        xzoom -1
  
     je "Dawgone it! {w=0.5}No place for the beans. {w=0.5}Boys, no steak tonight! {w=0.5}We're eating stew!"
     
@@ -116,34 +118,61 @@ label chapter_1:
 
     n "He turns, watching Joey fix his collar."
 
-    show Jenkin Angry at left:
-        xzoom -1
+    hide Jenkin Neutral
+
+    show Jenkin Angry at left
 
     pause 1.0
 
-    n "You woke up late again!"
+    je "You woke up late again!"
 
     pause 1.0
 
-    je "Joey, you live here, too. Your job is to get up and take the sheep to graze! What are you doin at night?! EH?!"
+
+    je "Start plating up. You have work to do. Those sheep have been crying all morning!"
     
-    pause 1.0
-
-    j "I was praying the other night."
-
-    hide Jenkin Angry
-    show Jenkin Neutral at left:
-        xzoom -1
-
     pause 2.0
 
+    j "I'm sorry"
+    
+    je "Stop being sorry. These sheep are more sorry than you. They got nothing but a burden of wool to carry every morning. What about you?"
+    
+    pause 2.0
+
+    hide Joey Uneasy
+    show Joey Angry at right
+
+    j "It's only been 20 minutes!"
+    
+    pause 2.0
+
+    hide Jenkin Angry
+    show Jenkin Neutral at left
+
+    je "Joey, boys like you don't make it. When they don't work, or sleep, or even think right, they're throwing themselves into a pit."
+    je "I took you in, and all these other boys. If anyone gets hurt, I'm gonna bear it."
+    je "I've seen boys do what you do, and they ain't here no more!"
+    hide Joey Angry
+    show Joey Uneasy at right
+    pause 1.0
+    je "What are you doin at night? Eh?!"
+    
+    pause 2.0
+
+    j "I was praying."
+
+    pause 3.0
+
+    hide Jenkin Neutral
+    show Jenkin Gentle at left
+
+    pause 0.5
+
     je "Fine. {w=0.5}Do it earlier.{w=0.5} You got no other reason to stay up.{w=0.5} Got it?"
+    pause 0.5
     j "Yes sir."
 
     pause 1.0
-
-    show Jenkin Gentle at left:
-        xzoom -1
 
     je "Boy, I'm no pastor.{w=0.5} It's Jenkins, Ted even."
     je "Heh,{w=0.5} if your bold, you can call me Teddy."
@@ -173,9 +202,7 @@ label Sausage:
     scene bg sausage
     with fade
 
-    play music ""
-
-    n "The sausage was spiraled up, {w=0.5}charred from a black burn from the pan."
+    n "The sausage was charred from a black burn, a well greased pan, no doubt."
     
     pause 2.0
 
@@ -185,29 +212,32 @@ label Sausage:
 
     n "He cooked the sausage, the scent of grease rising, the popping of oil rising up. Every pop seared onto his wrists and arms as the sausage curled like a cobra, until-{w=2.0}"
     n "POP!"
-    n "Joey screamed, dropping down, pan falling as he Dad rushed in."
+    n "A sausage exploded, hitting Joey's arm."
+    n "He screamed, dropping down, pan falling as he Dad rushed in."
+    pause 2.0
     n "He bandages his wound, wrapping it hard around his wrist."
     j "Dad, it hurts!"
     j_d "I don't care."
     j "Dad!"
     j_d "BE QUIET! BE QUIET!!!"
     pause 3.0
-    j "..."
-    j_d "He pulled out a brown sweater. Though the air was hot, the sleeves covered Joey's wounds."
+    n "He pulled out a brown sweater. Though the air was hot, the sleeves covered Joey's wounds."
     j_d "Take it off, tear it, get so much as a stain, and I'll give you something to cry about!"
-    j_d "Fail that test of yours, and your wearing it all summer! Got it?!"
-    j "{w=0.2}Yes."
-    j_d "...Go to the library."
-    j "Ok"
+    j_d "I'll make you wear it all summer if I have to! Got it?!"
     pause 1.0
-    j_d "I love you."
+    j "Yes."
+    j_d "...Go to the library."
+    pause 1.0
+    j "Ok"
+    pause 3.0
+    j_d "Have a nice day."
     pause 2.0
-    j "I-love-you-too."
+    j "You-too."
     
     pause 1.0
 
     n "Joey steps out, his Dad trails behind him and takes a seat outside the porch, watching him. Joey hangs his head, walking to the library."
-    n "Sweat oozed from his head, and he wiped it furiously, lest the collar become soaked."
+    n "Sweat oozed from his head, and he shook his head furiously, lest the collar become soaked."
 
     jump after_story
 
@@ -226,7 +256,7 @@ label Eggs:
     with fade
 
     n "...Joey was taken outside. His head hung low like an anvil hanging from a thread."
-    j_d "'I'm trash? I'm trash?! TAKE YOUR SHOE OFF!'"
+    j_d "'I'm trash, you said? I'm trash?! TAKE YOUR SHOE OFF!'"
     
     pause 1.0
 
@@ -235,19 +265,19 @@ label Eggs:
     j_d "-!"
     n "Joey clutched his head, blood flowing down."
 
-    pause 1.0
+    pause 2.0
 
     n "As the sun set, the boy stared at the mirror, watching tuffs of brown fall down ss he held his head. He got to hold the mirror."
     j "I look like a chicken."
     j_d "Heh. A chickens butt."
     j "...You hit me."
-    j_d "I paid for those shoes, so Imma remind you I did."
+    j_d "{w=0.5}I paid for those shoes, so Imma remind you I did."
     j_d "Say that again, and I'll get your next pair from the dumpster."
     j_d "Got it?"
-    j "Yes."
+    j "{w=0.5}Yes."
     j_d "Good. {w=3.0}Heh, you got chicken legs."
     n "Joey looks down, seeing his shoes are on the wrong feet. He doesn't move. His Dad does fixes them for him."
-    j_d "Can't do anything, huh? Heh, chickens are as chickens do..."
+    j_d "Heh, a chicken is as a chicken does..."
 
     jump after_story
 
@@ -269,13 +299,16 @@ label Toast:
     j_d "What are you doin?"
     j "..."
     j_d "Look at you, eating like a rat. I told you I would make breakfast, right? You little theif!"
-    j "...I was hungry."
+    j "{w=0.5}...I was hungry."
     n "His Dad pushes him out the way, unplugging the toaster. He swings the window open, throwing the toaster-"
     n "-missing the dumpster."
     
+    pause 2.0
+
+    j_d "Eat your toast."
+
     pause 1.0
 
-    j_d "Enjoy your toast."
     j "And Joey did. He didn't even bother with the butter. He took a bite, and swallowed. Took a bite, and swallowed. Took a bite..."
 
     jump after_story
@@ -289,9 +322,6 @@ label after_story:
 
     pause 1.5
 
-    show Jenkin Angry at left:
-        xzoom -1
-
     je "JOEY!"
 
     hide Joey Sad
@@ -300,13 +330,11 @@ label after_story:
     pause 1.0
 
     hide Joey Surprised
-    show Joey Angry
+    show Joey Angry at right
 
     j "What?!"
 
-    hide Jenkin Angry
-    show Jenkin Neutral at left:
-        xzoom -1
+    show Jenkin Neutral at left
 
     je "Feed yourself or the sheep!"
 
@@ -318,34 +346,36 @@ label after_story:
 
     if after_food == "Eggs":
         scene eggs
-        n "{W=2.0}"
+        pause 3.0
         jump after_story_2
     elif after_food == "Sausage":
         scene sausage
-        n "{w=2.0}"
+        pause 3.0
         jump after_story_2
+
     elif after_food == "Toast":
         scene toast
-        n "{w=2.0}"
+        pause 3.0
         jump after_story_2
 
 label after_story_2:
     
     scene kitchen
     show Joey Sad at right 
+
     pause 1.0
+
     j "{w=1.5}...I'm gonna fast."
     j "He grabs his staff and makes his way out{w=0.5}."
+
+    scene black
+    with fade
 
     jump chapter_2
 
 label chapter_2:
 
-    scene black
-    with fade
-
 # MINIGAME 
-# NOTICE: THIS MINIGAME HAS AN OVERLAPPING ISSUE. YOU MAY NEED TO RESTART THE MINIGAME IF SUCH HAPPENS
 
 default sheep_found = 0
 default found_pos = []
@@ -359,11 +389,11 @@ label game_part_1:
     $ special_pos = random.sample(daisy_pos, 3)
     $ found_pos = []
 
-    j "Where are those sheep?"
+    j "Ugh, where are those sheep?"
 
     call screen sheep_game
 
-    j "Finally! Let's go back to the barn!"
+    j "Whew!{w=0.5} About time!{w=0.5} Let's go back to the barn!"
     jump chapter_3
 
 screen sheep_game():
@@ -397,18 +427,22 @@ label chapter_3:
     scene bg Valley
     with fade
 
-
-    n "The pen gate is locked, and the little ones stick their head out the fense, grazing on them, lazily scanning Joey, who falls asleep laying on his staff."
+    n "The valley is seasoned with dew, hanging from the bellies of Jacob's ladders."
+    n "Perfect for Joey, he dug his staff in the loose soil, sitting on a tree stump while the sheep rested in their pen."
+    n "The little ones stick their head out the fense, grazing on stray dandelions, lazily scanning Joey, who fell asleep laying on his staff."
+    pause 1.0
+    n "They run to their mother."
     pause 3.0
 
+    n "-SNAP"
     show Joey Guilty at right
     j "Eh-"
     hide Joey Guilty
     show Joey Shocked at right
     hide Joey Shocked
-    pause 0.2
+    pause 0.5
     scene bg Wolf
-    n "{w=2.0}A wolf growls, the foam in his teeth shedding like molded cloth."
+    n "A wolf growls, the foam in his teeth shedding like molded cloth."
     n "It's not hungry. The darting of the eyes and snapping of the neck say it all. It's rabid."
 
     if after_food == "Eggs":
@@ -473,7 +507,7 @@ label continue_3:
     scene black
     with fade
 
-    n "Joey bolts through the field, flailing his hands, crying wolf. He didn't see the ditch-"
+    n "Joey bolts through the field, flailing his hands, crying wolf.{w=1.0} He didn't see the ditch-"
     j "Augh-!"
     j "{cps=20}..{w=0.5}..{w=0.5}..{w=0.5}..{w=0.5}.."
     
@@ -490,13 +524,16 @@ label continue_3:
     scene bg Valley
     with fade
 
-    n "Joey's exahales, rolling over. He's eye to eye with a German Shepherd."
+    n "Joey's exahales, rolling over, sitting up."
     
+    pause 2.0
+    show Shepherd Neutral at center
+    hide  Shepherd Neutral
     show Joey Crying at right
 
     pause 2.0
 
-    j "Is that wolfs gone?"
+    j "Is that wolf gone?"
 
     show Shepherd Lifted Brow at center
 
@@ -511,7 +548,7 @@ label continue_3:
     pause 1.5
 
     hide Joey Crying
-    show Joey Laid Back at the right
+    show Joey Laid Back at right
 
     j "Heh."
 
@@ -548,7 +585,7 @@ label continue_3:
 
     je "You fell asleep, didn't you?"
 
-    pause 1.0
+    pause 2.0
 
     je "Joey, this has to stop."
 
@@ -564,24 +601,34 @@ label continue_3:
     hide Jenkin Neutral
     show Jenkin Angry at left
 
+    hide Shepherd Neutral
+    show Shepherd Lifted Brow at center:
+        xzoom -1
+
     je "THIS HAS TO STOP! STOP STAYIN UP LATE! GET UP ON TIME!"
     je "YOU COULD HAVE GOTTEN MAWLED!"
+
+    pause 3.0
 
     hide Joey Red Faced
     hide Jenkin Angry
     show Joey Guilty at right
 
-    pause 2.0
+    pause 3.0
 
     hide Joey Guilty
     show Joey Sad at right
 
-    pause 2.0
+    pause 3.0
 
+    hide Shepherd lifted Brow
+    show Shepherd Neutral at center
     hide Joey Sad
     show Joey Crying at right
+    hide Shepherd Neutral
+    show Shepherd Calm at center
 
-    pause 2.0
+    pause 3.0
 
     n "Joey lowers his head, clenching his fists, popping his thumbs."
     
@@ -592,6 +639,10 @@ label continue_3:
     n "...But Jenkins eyes the dog."
 
     pause 0.5
+
+    hide Shepherd Calm
+    show Shepherd Neutral at center:
+        xzoom -1
 
     je "...This mutt saved you? {w=0.5}Heh, I've seen messier beagles in Charlie Brown."
 
@@ -615,12 +666,16 @@ label continue_3:
     j "{w=0.5}.{w=0.5}.{w=0.5}."
 
     hide Joey Light Eyed
+    hide Shepherd Neutral
+    show Shepherd Happy at center
     show Joey Shocked at right
+
+    pause 0.5
 
     n "The dog jumps on him holding him by the shoulders, until he falls."
    
     hide Joey Shocked
-    hide Shepherd Neutral
+    hide Shepherd Happy
 
     pause 0.5
 
@@ -630,7 +685,7 @@ label continue_3:
     hide Jenkin Neutral
     show Jenkin Gentle at left
 
-    pause 0.5
+    pause 2.0
 
     je "Good! {w=0.5}Now save your prayers for your beside! Got it?"
     
@@ -658,13 +713,15 @@ label Dog_Name:
 
     j "[Dog_Name]."
 
+    pause 2.0
+
     hide Joey Gentle
     show Joey Happy at right
 
     j "Ya like it? That's your new name!"
 
     hide Shepherd Neutral
-    show Shepherd Calm
+    show Shepherd Happy
 
     scene black
     with fade
@@ -672,31 +729,35 @@ label Dog_Name:
     hide Joey Happy
     hide Joey Gentle
 
-    n "[Dog_Name] pushed his nose against Joey's, nuzzling him."
-
     scene bg Bond
     with fade
+
+    n "[Dog_Name] pushed his nose against Joey's, nuzzling him."
+
 
     n "And after many years, Joey laughed."
 
     scene black
     with fade
 
-    pause 3.0
-
     jump chapter_4
 
 
 label chapter_4:
-    p_j_d "My pen's dead. Can't write.{w=0.5}...Lord, you had mercy on me. You are my only hope."
+    pause 3.0
+    p_j_d "My pen's dead. {w=0.5}Can't write.{w=0.5}...Lord, you had mercy on me.{w=0.5} You are my only hope."
     p_j_d "I'm fine goin' to solitary...{w=0.5}I'm fine getting more time...{w=0.5}"
+    pause 2.0
     j_d "I just want my son to have hope...{w=0.5}Please give him hope!{w=0.5} He has none because of me!"
     j_d "Where's my son gonna go? {w=0.5}How is he gonna live? {w=0.5}How is he...{w=0.5}gonna die?"
     j_d "{w=0.5}...Lord, you let dogs like me can eat the crumbs from under your table!"
-    j_d "My son's no dog, but...you can take care of him, now. Help him see how much he needs you."
+    j_d "My son's no dog, but...{w=0.5}he needs you, too!" 
+    j_d "Please...{w=0.5}Help him, Lord!"
     
     pause 0.5
     n "TO BE CONTINUED"
+    
+    return
     
     return
 
